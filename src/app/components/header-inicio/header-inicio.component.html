@@ -1,0 +1,21 @@
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+            <div id="header">
+
+                <!-- Logo -->
+                    <h1><a [routerLink]="['/inicio']" id="logo">Cooperativa <em>San Jorge</em></a></h1>
+
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li [routerLinkActive]="'current'"><a [routerLink]="['/inicio']">Inicio</a></li>                   
+                            <li [routerLinkActive]="'current'"><a [routerLink]="['/nosotros']">Nosotros</a></li>
+                            <!--<li [routerLinkActive]="'current'"><a href="right-sidebar.html">Beneficios</a></li>
+                            <li [routerLinkActive]="'current'"><a href="two-sidebar.html">Campañas</a></li>-->
+                            <li [routerLinkActive]="'current'"><a [routerLink]="['/contacto']">Contacto</a></li>
+                            <li><a [routerLink]="['/login']">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+            </div>

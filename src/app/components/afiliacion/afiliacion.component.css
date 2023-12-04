@@ -1,0 +1,116 @@
+
+.form-container-background {
+    background: linear-gradient(to right top, #eae0c8, #070a1d);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos para el contenedor del formulario */
+.form-container {
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    position: fixed;
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.3s;
+    transform: translateY(0) scale(1);
+    background: rgba(247, 247, 247, 0.5);
+    justify-content: center;
+    border: 2px solid #858383; /* Borde delgado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-container form {
+    width: 80%; /* Ancho completo del formulario */
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form label {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 8px; /* Menos espacio de relleno */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Tamaño incluyendo el borde */
+}
+
+.form-container form select {
+    width: 100%; /* Ancho completo para selects */
+}
+
+.img-container {
+    display: flex;
+    max-width: 100px; /* Ancho máximo de la imagen */
+    margin-left: 70px; /* Espacio entre el input y la imagen */
+}
+
+.img-thumbnail {
+    max-width: 100px; /* Tamaño máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.flex-row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.button-container{
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 8px; /* Menos espacio de relleno */
+    box-sizing: border-box; /* Tamaño incluyendo el borde */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container-2{
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 8px; /* Menos espacio de relleno */
+    box-sizing: border-box; /* Tamaño incluyendo el borde */
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #e48537;
+    color: white;
+}
+
+.button-container:hover,
+.button-container-2:hover {
+    filter: brightness(110%); /* Aumenta un poco el brillo al pasar el mouse */
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    justify-content: center;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px; /* Tamaño más grande para un aspecto más profesional */
+    font-weight: bold;
+    color: #d3d2d2;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Espaciado entre letras para mayor legibilidad */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar el título */
+}
+
+.custom-file-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) cuando el texto se desborda */
+    max-width: 200px; /* Ancho máximo permitido para mostrar el nombre del archivo */
+}

@@ -1,0 +1,75 @@
+   <div class="form-container-background">
+        <h1 class="title">Solicitud afiliación socio</h1>  
+    <div class="form-container">
+        <form #registroForm="ngForm" (ngSubmit)="registro(registroForm)">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Nombres</label>
+                    <input class="form-control" type="text" required name="nombres" placeholder="Nombres Completos" [(ngModel)] = "solicitud.nombres">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Apellidos</label>
+                    <input class="form-control" type="text" required name="apellidos" placeholder="Apellidos Completos" [(ngModel)] = "solicitud.apellidos">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Correo electrónico</label>
+                    <input class="form-control" type="email" placeholder="Correo electrónico"  required name="email" [(ngModel)] = "solicitud.email">
+                  </div>
+    
+                  <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Teléfono</label>
+                    <input class="form-control" type="text" placeholder="Telefono"  required name="telefono" [(ngModel)] = "solicitud.telefono">
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Fecha nacimiento</label>
+                    <input class="form-control" type="date" required name="f_nacimiento" [(ngModel)] = "solicitud.f_nacimiento">
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">DNI</label>
+                    <input class="form-control" type="text" placeholder="DNI" required name="dni" [(ngModel)] = "solicitud.dni">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Genero</label>
+                    <select class="form-control custom-select" name="genero" required [(ngModel)]="solicitud.genero">
+                      <option value="" disabled selected>Seleccionar</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="validationCustom01" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" placeholder="Dirección" required name="direccion" [(ngModel)] = "solicitud.direccion">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Cargo</label>
+                    <select class="form-control custom-select" name="cargo" required [(ngModel)] = "solicitud.cargo">
+                      <option value="" disabled selected>Seleccionar</option>
+                      <option value="Doctor(a)">Doctor(a)</option>
+                      <option value="Enfermera(o)">Enfermera(o)</option>
+                      <option value="Administrador(a)">Administrador(a)</option>
+                    </select>
+                  </div>
+                <div class="col-md-4 form-group flex-container">
+                    <label for="">Documento Essalud</label>
+                    <div class="flex-row">
+                        <div class="custom-file mr-10">
+                          <label class="custom-file-label" id="input-documento" for="file-input" style="white-space:nowrap;overflow:hidden">Seleccionar imagen</label>
+                            <input class="file" type="file" id="file-input" (change)="fileChangeEvent($event)"> 
+                        </div>
+                        <div class="img-container">
+                            <img [src]="imgSelect" class="img-thumbnail" alt="Rounded image">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-footer col-md-12">
+                  <button *ngIf="!load_btn" class="btn btn-primary button-container" type="submit">Enviar Solicitud</button>
+                  <button *ngIf="load_btn" type="button" class="btn btn-secondary button-container" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Creando...
+                  </button>
+                     <a class="btn btn-warning button-container-2" [routerLink]="['/inicio']">Regresar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+   </div>

@@ -1,0 +1,67 @@
+#bannerhead {
+    /* Otros estilos que desees agregar */
+    text-align: center;
+    position: relative;
+}
+
+/* Estilos para el bannerfoot */
+#bannerfoot {
+    /* Estilo para separar los elementos verticalmente */
+    margin-top: 92px;
+    /* Otros estilos que desees agregar */
+    text-align: center;
+    position: relative;
+}
+
+#bannerfoot header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #212121;
+    background: rgba(27, 27, 27, 0.75);
+    color: #fff;
+    padding: 1.5em 0;
+}
+
+#bannerfoot header h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.25em;
+    vertical-align: middle;
+}
+
+#bannerfoot header h2 em {
+    opacity: 0.75;
+}
+
+#bannerfoot header h2 a {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+#bannerfoot header h2 a:hover {
+    border-bottom-color: transparent;
+}
+
+#bannerfoot header .button {
+    vertical-align: middle;
+    margin-left: 1em;
+}
+
+.carousel-item img {
+    height: 50em; /* Altura deseada para las imágenes */
+    width: 100%;
+    object-fit: fill; /* Ajusta la imagen dentro del contenedor manteniendo su proporción */
+}
+
+.carousel-control-prev {
+    background-color: rgb(197, 197, 197,0.2); /* Cambia el color de fondo del botón "Previous" a rojo */
+    width: 10px;
+    /* Otros estilos... */
+}
+
+.carousel-control-next {
+    background-color: rgb(197, 197, 197,0.2); /* Cambia el color de fondo del botón "Next" a verde */
+    width: 10px;
+    /* Otros estilos... */
+}
